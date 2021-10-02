@@ -1,0 +1,9 @@
+kind: reverse
+name: mydb
+source:
+  database: mysql
+  conn_str: 'MYSQL_USER:MYSQL_PASSWORD@tcp(MYSQL_HOST:MYSQL_PORT)/micro-mall-users-cron?charset=utf8'
+targets:
+  - type: codes
+    language: golang
+    output_dir: ./

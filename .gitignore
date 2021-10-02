@@ -1,0 +1,22 @@
+# Binaries for programs and plugins
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+
+# Test binary, built with `go test -c`
+*.test
+
+# Output of the go coverage tool, specifically when used with LiteIDE
+*.out
+/vendor
+logs
+micro-mall-users-cron
+etc/app.ini
+micro-mall-users-cron.pid
+micro-mall-users-cron-darwin-amd64
+micro-mall-users-cron-linux-amd64
+micro-mall-users-cron-windows-amd64.exe
+micro-mall-users-cron-windows-amd64
+nohup.out

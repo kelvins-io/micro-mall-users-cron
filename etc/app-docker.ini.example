@@ -1,0 +1,42 @@
+[kelvins-server]
+Environment = "dev"
+
+[kelvins-logger]
+RootPath = "./logs"
+Level = "debug"
+
+[kelvins-mysql]
+Host = "mysql5_7:3306"
+UserName = "root"
+Password = "xx-xxx"
+DBName = "xx"
+Charset = "utf8mb4"
+PoolNum =  10
+MaxIdleConns = 5
+ConnMaxLifeSecond = 3600
+MultiStatements = true
+ParseTime = true
+
+[user-info-search-notice]
+Broker = "amqp://micro-mall:szJ9aePR@127.0.0.1:5672/micro-mall"
+DefaultQueue = "user_info_search_notice"
+ResultBackend = "redis://xxxx@127.0.0.1:6379/8"
+ResultsExpireIn = 3600
+Exchange = "user_info_search_notice"
+ExchangeType = "direct"
+BindingKey = "user_info_search_notice"
+PrefetchCount = 3
+TaskRetryCount = 3
+TaskRetryTimeout = 3600
+
+[email-config]
+User = "xxx@qq.com"
+Password = "xx"
+Host = "smtp.qq.com"
+Port = "465"
+
+[email-notice]
+Receivers = "610905744@qq.com"
+
+[user-info-search-notice-task]
+Cron = "0 */5 * * * *"
