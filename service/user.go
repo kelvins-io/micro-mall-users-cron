@@ -16,9 +16,14 @@ var (
 )
 
 func UserInfoSearchSync() {
+	if vars.UserInfoSearchSyncTaskSetting != nil {
+		if vars.UserInfoSearchSyncTaskSetting.SingleSyncNum > 0 {
+			pageSize = vars.UserInfoSearchSyncTaskSetting.SingleSyncNum
+		}
+	}
 	count := 0
 	for {
-		if count > 2 {
+		if count > 5 {
 			break
 		}
 		count++

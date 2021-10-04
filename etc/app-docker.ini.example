@@ -40,3 +40,4 @@ Receivers = "610905744@qq.com"
 
 [user-info-search-notice-task]
 Cron = "0 */5 * * * *"
+SingleSyncNum = 100

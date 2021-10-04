@@ -16,9 +16,14 @@ var (
 )
 
 func MerchantInfoSearchSync() {
+	if vars.UserInfoSearchSyncTaskSetting != nil {
+		if vars.UserInfoSearchSyncTaskSetting.SingleSyncNum > 0 {
+			merchantSearchPageSize = vars.UserInfoSearchSyncTaskSetting.SingleSyncNum
+		}
+	}
 	count := 0
 	for {
-		if count > 2 {
+		if count > 5 {
 			break
 		}
 		count++
