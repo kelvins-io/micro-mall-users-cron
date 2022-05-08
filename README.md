@@ -111,9 +111,6 @@ Password = "xxx"
 Host = "smtp.qq.com"
 Port = "465"
 
-[email-notice]
-Receivers = "xxx@qq.com"
-
 [user-info-search-notice-task]
 Cron = "0 */5 * * * *"
 SingleSyncNum = 100

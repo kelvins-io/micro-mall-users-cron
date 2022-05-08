@@ -7,10 +7,6 @@ type EmailConfigSettingS struct {
 	Port     string
 }
 
-type EmailNoticeSettingS struct {
-	Receivers []string
-}
-
 type UserInfoSearchSyncTaskSettingS struct {
 	Cron          string
 	SingleSyncNum int
