@@ -2,11 +2,12 @@ package email
 
 import (
 	"context"
-	"gitee.com/cristiane/micro-mall-users-cron/vars"
-	"gitee.com/kelvins-io/kelvins"
 	"strings"
 	"sync"
 	"time"
+
+	"gitee.com/cristiane/micro-mall-users-cron/vars"
+	"gitee.com/kelvins-io/kelvins"
 )
 
 var (
@@ -25,6 +26,9 @@ func SendEmailNotice(ctx context.Context, receivers, subject, msg string) error 
 	one.Do(func() {
 		initVars()
 	})
+	if receivers == "" {
+		return nil
+	}
 	var err error
 	emailReq := &SendRequest{
 		Receivers: strings.Split(receivers, ","),
